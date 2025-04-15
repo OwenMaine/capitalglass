@@ -1,0 +1,1385 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@font-face {
+    font-family: "Righteous";
+    src: url("../fonts/Verdana-Black.ttf");
+    src: url("../fonts/Poppins.ttf");
+}
+
+
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(css/font-awesome.min.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(swiper.min.css);
+@import url(slick.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+/* General Reset */
+* {
+    box-sizing: border-box !important;
+    transition: all 0.4s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #4A4A4A; /* Neutral gray for text */
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    line-height: 1.8;
+    font-weight: 400;
+    background-color: #F8F9FB; /* Light gray background */
+    overflow-x: hidden;
+}
+
+/* Links */
+a {
+    color: #004080; /* Navy for links */
+    text-decoration: none !important;
+    outline: none !important;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a:hover {
+    color: #0080FF; /* Lighter blue on hover */
+    border-bottom: 2px solid #0080FF;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.5px;
+    font-weight: 500; /* Medium weight for headings */
+    color: #00264D; /* Dark navy for headings */
+    margin: 0;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 28px; /* Adjusted for better readability */
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+/* Paragraphs */
+p {
+    margin: 15px 0;
+    font-size: 15px;
+    color: #595959; /* Slightly darker gray for better contrast */
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    background-color: #004080; /* Navy background */
+    color: #FFFFFF; /* White text */
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #0080FF; /* Light blue on hover */
+    transform: translateY(-3px); /* Adds a lift effect */
+}
+
+/* Forms */
+.form-control {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.form-control:focus {
+    border-color: #004080 !important; /* Navy focus outline */
+    box-shadow: 0 0 5px rgba(0, 64, 128, 0.5); /* Subtle glow */
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adds slight rounding for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Footer */
+.footer {
+    background-color: #00264D; /* Dark navy */
+    color: #FFFFFF; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #0080FF; /* Light blue for links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #00BFFF; /* Sky blue on hover */
+}
+
+/* Additional Utility Classes */
+.text-center {
+    text-align: center !important;
+}
+
+.padding-top {
+    padding-top: 20px;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+/* Navigation Bar Input */
+.navbar-form input {
+    border: 1px solid #CCCCCC !important; /* Subtle gray border for input fields */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Increased padding for better usability */
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effects */
+}
+
+.navbar-form input:focus {
+    border-color: #004080 !important; /* Navy border on focus */
+    box-shadow: 0 0 5px rgba(0, 64, 128, 0.3); /* Subtle glow effect */
+}
+
+/* Badge Styling */
+.badge {
+    font-weight: 600; /* Slightly bolder font for emphasis */
+    background-color: #004080; /* Navy background */
+    color: #FFFFFF; /* White text */
+    padding: 5px 10px;
+    border-radius: 4px; /* Rounded corners */
+    text-transform: uppercase; /* Make text uppercase for consistency */
+    font-size: 12px;
+}
+
+/* Blockquote Enhancements */
+blockquote {
+    margin: 20px 0;
+    padding: 20px 30px; /* Adjusted padding for a balanced look */
+    border-left: 4px solid #004080; /* Navy left border for a modern design */
+    background-color: #F0F4F8; /* Light gray-blue background */
+    font-style: italic;
+    color: #555555; /* Neutral gray for text */
+    border-radius: 5px; /* Slight rounding for a softer look */
+}
+
+/* Button Styling */
+button {
+    border: 0;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #004080; /* Navy background */
+    color: #FFFFFF; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+button:hover {
+    background-color: #0080FF; /* Lighter blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Utility Classes */
+.full {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout Padding */
+.layout_padding {
+    padding-top: 100px; /* Increased padding for better spacing */
+    padding-bottom: 20px; /* Added bottom padding */
+}
+
+/* Zero Padding */
+.padding_0 {
+    padding: 0 !important;
+}
+
+/* Logo Styling */
+.logo {
+    width: 40%; /* Adjusted width for better responsiveness */
+    float: left;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Header Section */
+.header_section {
+    width: 100%;
+    float: left;
+    background-image: linear-gradient(rgba(0, 40, 80, 0.7), rgba(0, 40, 80, 0.7)), url(../images/25.jpg); /* Added gradient overlay for better readability */
+    height: auto;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
+    padding: 50px 0; /* Added padding for better spacing */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+/* Navigation Bar */
+.bg-light {
+    background-color: rgba(0, 40, 80, 0.9) !important; /* Slightly transparent navy background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF; /* White text for nav links */
+    text-transform: uppercase;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #00BFFF; /* Sky blue hover effect */
+    text-shadow: 0 2px 4px rgba(0, 191, 255, 0.5); /* Dynamic glow effect on hover */
+}
+
+/* Search Menu */
+.search_menu {
+    float: left;
+}
+
+.search_menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for better alignment */
+    gap: 20px; /* Added spacing between items */
+}
+
+.search_menu li {
+    list-style-type: none; /* Removed bullet points */
+    padding: 0;
+}
+
+.search_menu li a {
+    font-size: 16px;
+    color: #EEEEEE; /* Light gray for search menu links */
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.search_menu li a:hover {
+    color: #00BFFF; /* Sky blue hover effect */
+    border-bottom: 2px solid #00BFFF; /* Underline effect on hover */
+}
+
+/* Search Section Links */
+.search_section li a {
+    color: #333333; /* Dark gray for better readability */
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.search_section li a:hover {
+    color: #004080; /* Navy hover color */
+}
+
+/* Banner Section */
+.banner_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    background: linear-gradient(to bottom, rgba(0, 40, 80, 0.8), rgba(0, 64, 128, 0.8)); /* Gradient background for a modern look */
+    color: #FFFFFF; /* White text for contrast */
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Banner Title */
+.banner_taital {
+    width: 100%;
+    float: left;
+    font-size: 60px; /* Adjusted for better readability */
+    color: #FFFFFF; /* Pure white for better contrast */
+    font-weight: bold;
+    line-height: 1.2; /* Adjusted for better spacing */
+    text-transform: uppercase; /* Adds a professional touch */
+    letter-spacing: 2px; /* Slight spacing between letters */
+}
+
+/* Banner Subtitle Text */
+.banner_text {
+    width: 100%;
+    float: left;
+    font-size: 18px; /* Slightly larger for readability */
+    color: #D9EFFF; /* Light blue for contrast */
+    margin: 10px 0;
+    font-weight: 300; /* Light font weight for elegance */
+}
+
+/* Main Content Alignment */
+.taital_main {
+    padding-left: 5%; /* Adjusted for better responsiveness */
+    text-align: center;
+}
+
+/* Buttons Container */
+.btn_main {
+    width: 100%;
+    float: left;
+    margin-top: 20px; /* Added spacing above buttons */
+    display: flex;
+    justify-content: center; /* Centered buttons horizontally */
+    gap: 20px; /* Added spacing between buttons */
+}
+
+/* More Button */
+.more_bt {
+    width: 170px;
+    float: left;
+}
+
+.more_bt a {
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF; /* White text */
+    background-color: #004080; /* Navy blue background */
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.more_bt a:hover {
+    background-color: #0080FF; /* Light blue hover effect */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Contact Button */
+.contact_bt {
+    width: 170px;
+    float: left;
+}
+
+.contact_bt a {
+    display: block;
+    font-size: 16px;
+    color: #004080; /* Navy text */
+    background-color: #FFFFFF; /* White background */
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #004080; /* Navy border */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact_bt a:hover {
+    color: #FFFFFF; /* White text on hover */
+    background-color: #004080; /* Navy background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Banner Images */
+.image_1 {
+    width: 90%;
+    float: right;
+    text-align: center;
+    border-radius: 10px; /* Rounded edges for a softer look */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.image_2 {
+    width: 30%;
+    float: left;
+    position: relative;
+    left: -60px;
+    border-radius: 10px; /* Rounded edges for consistency */
+}
+
+/* Play Icon Styling */
+.play_icon {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Decorative Text Styles */
+.one_text, .one_text_1 {
+    font-size: 22px;
+    color: #FFFFFF; /* White text */
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Professional look */
+    letter-spacing: 1px;
+}
+
+.one_text::after, .one_text_1::after {
+    content: '';
+    position: absolute;
+    background-color: #FFFFFF; /* White underline */
+    height: 3px;
+    width: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: transparent no-repeat center center;
+    background-size: contain;
+    border: 2px solid #FFFFFF; /* White border for visibility */
+    border-radius: 50%; /* Circular controls */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: #0080FF; /* Light blue hover effect */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.carousel-control-prev {
+    left: 20px; /* Adjusted for better placement */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    right: 20px; /* Adjusted for better placement */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Sales Section */
+.sales_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 90px;
+    background-color: #F8F9FB; /* Light gray background for a clean look */
+}
+
+/* Sales Box 1 */
+.sales_box {
+    width: 100%;
+    float: left;
+    background-color: #004080; /* Navy blue for a professional look */
+    height: auto;
+    padding: 20px 20px 39px 20px;
+    border-radius: 8px; /* Rounded edges for modern design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Left Main Content */
+.left_main {
+    width: 50%;
+    float: left;
+}
+
+/* Title in Sales Section */
+.best_taital {
+    width: 100%;
+    float: left;
+    color: #FFFFFF; /* White for contrast */
+    font-size: 28px; /* Increased size for readability */
+    font-weight: bold;
+    letter-spacing: 1px; /* Slight spacing for elegance */
+    text-transform: uppercase; /* Professional touch */
+}
+
+/* Text in Sales Section */
+.best_text {
+    width: 100%;
+    float: left;
+    color: #D9EFFF; /* Light blue for subtle contrast */
+    font-size: 16px;
+    margin: 0px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Contact Button */
+.contact_bt_1 {
+    width: 140px;
+    float: left;
+    margin-top: 20px;
+}
+
+.contact_bt_1 a {
+    display: block;
+    font-size: 16px;
+    color: #004080; /* Navy text */
+    background-color: #FFFFFF; /* White background */
+    text-align: center;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border: 2px solid #004080; /* Navy border */
+    border-radius: 5px; /* Rounded edges */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.contact_bt_1 a:hover {
+    color: #FFFFFF; /* White text on hover */
+    background-color: #004080; /* Navy background on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Sales Box 2 */
+.sales_box_1 {
+    width: 100%;
+    float: left;
+    background-color: #0080FF; /* Light blue for contrast */
+    height: auto;
+    padding: 20px;
+    border-radius: 8px; /* Rounded edges for consistency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Sales Images */
+.image_3 {
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+    text-align: center;
+    border-radius: 8px; /* Add rounding for a modern look */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Add depth with shadow */
+}
+
+/* Shop Button */
+.shop_bt {
+    width: 140px;
+    float: left;
+    margin-top: 20px;
+}
+
+.shop_bt a {
+    display: block;
+    font-size: 16px;
+    color: #0080FF; /* Light blue text */
+    background-color: #FFFFFF; /* White background */
+    text-align: center;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border: 2px solid #0080FF; /* Light blue border */
+    border-radius: 5px; /* Rounded edges */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.shop_bt a:hover {
+    color: #FFFFFF; /* White text on hover */
+    background-color: #004080; /* Navy background on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Category Section */
+.category_section {
+    width: 100%;
+    float: left;
+    background-color: #004080; /* Navy blue for a professional look */
+    height: auto;
+    padding: 20px 0; /* Improved spacing */
+}
+
+/* Category Menu */
+.category_menu {
+    width: 100%;
+    float: left;
+    text-align: center; /* Center align the menu */
+}
+
+.category_menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for better alignment */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Add spacing between menu items */
+}
+
+.category_menu li {
+    font-size: 18px;
+    color: #FFFFFF; /* White text for contrast */
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 15px; /* Add padding for better touch targets */
+}
+
+.category_menu li a {
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded edges for a modern look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.category_menu li a:hover {
+    color: #004080; /* Navy text on hover */
+    background-color: #FFFFFF; /* White background on hover */
+}
+
+/* Secondary Category Section */
+.category_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+    background-color: #F5F7FA; /* Light gray for a clean look */
+    padding-bottom: 45px;
+    border-top: 3px solid #004080; /* Add a navy border for separation */
+}
+
+/* New Box */
+.new_box {
+    width: 100%;
+    float: left;
+    background-color: #FFFFFF;
+    border: 1px solid #D9EFFF; /* Light blue border for a sleek look */
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* 'New' Text on Box */
+.new_text {
+    width: 150px; /* Increased width for better visibility */
+    float: left;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #004080; /* Navy blue background */
+    text-align: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.new_text a {
+    color: #FFFFFF;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Image in New Box */
+.image_5 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    min-height: 210px;
+    padding-top: 30px;
+    border-radius: 8px; /* Rounded edges for consistency */
+}
+
+/* Highlighted Box Section */
+.new_box_1 {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    background-color: #0080FF; /* Light blue background for contrast */
+    border-radius: 8px; /* Rounded edges */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+/* Left Aligned Content */
+.box_left {
+    width: 50%;
+    float: left;
+}
+
+/* Text in Highlighted Box */
+.led_text {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #FFFFFF; /* White text */
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-weight: 500; /* Medium font weight */
+}
+
+/* Buy Button Text */
+.buy_text {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-top: 13px;
+    text-align: right;
+    font-weight: 600; /* Slightly bolder text */
+}
+
+/* Carousel Controls */
+#main_slider a.carousel-control-next,
+#main_slider a.carousel-control-prev {
+    position: absolute;
+    top: 35%;
+    width: 65px;
+    height: 65px;
+    background: #004080; /* Navy background */
+    color: #FFFFFF; /* White icon color */
+    font-size: 30px;
+    border-radius: 50%; /* Circular controls */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+#main_slider a.carousel-control-next:hover,
+#main_slider a.carousel-control-prev:hover {
+    background-color: #0080FF; /* Light blue on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+#main_slider .carousel-control-next {
+    right: 30px;
+}
+
+#main_slider .carousel-control-prev {
+    left: 30px;
+}
+
+/* Hover Styles for Carousel Controls */
+#main_slider .carousel-control-prev:hover,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-next:focus {
+    background: #0080FF; /* Light blue */
+    color: #FFFFFF; /* Maintain white text */
+}
+
+/* Padding Adjustments */
+.padding_top_10 {
+    padding-top: 10px; /* Adjusted for better spacing */
+}
+
+/* Category Section */
+.category_section {
+    width: 100%;
+    float: left;
+    background-color: #004080; /* Navy blue for a professional look */
+    height: auto;
+    padding: 20px 0; /* Improved spacing */
+}
+
+/* Category Menu */
+.category_menu {
+    width: 100%;
+    float: left;
+    text-align: center; /* Center align the menu */
+}
+
+.category_menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for better alignment */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Add spacing between menu items */
+}
+
+.category_menu li {
+    font-size: 18px;
+    color: #FFFFFF; /* White text for contrast */
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 15px; /* Add padding for better touch targets */
+}
+
+.category_menu li a {
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded edges for a modern look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+.category_menu li a:hover {
+    color: #004080; /* Navy text on hover */
+    background-color: #FFFFFF; /* White background on hover */
+}
+
+/* Secondary Category Section */
+.category_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+    background-color: #F5F7FA; /* Light gray for a clean look */
+    padding-bottom: 45px;
+    border-top: 3px solid #004080; /* Add a navy border for separation */
+}
+
+/* New Box */
+.new_box {
+    width: 100%;
+    float: left;
+    background-color: #FFFFFF;
+    border: 1px solid #D9EFFF; /* Light blue border for a sleek look */
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* 'New' Text on Box */
+.new_text {
+    width: 150px; /* Increased width for better visibility */
+    float: left;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #004080; /* Navy blue background */
+    text-align: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.new_text a {
+    color: #FFFFFF;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Image in New Box */
+.image_5 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    min-height: 210px;
+    padding-top: 30px;
+    border-radius: 8px; /* Rounded edges for consistency */
+}
+
+/* Highlighted Box Section */
+.new_box_1 {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    background-color: #0080FF; /* Light blue background for contrast */
+    border-radius: 8px; /* Rounded edges */
+    color: #FFFFFF; /* White text for contrast */
+}
+
+/* Left Aligned Content */
+.box_left {
+    width: 50%;
+    float: left;
+}
+
+/* Text in Highlighted Box */
+.led_text {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #FFFFFF; /* White text */
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-weight: 500; /* Medium font weight */
+}
+
+/* Buy Button Text */
+.buy_text {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-top: 13px;
+    text-align: right;
+    font-weight: 600; /* Slightly bolder text */
+}
+
+/* Carousel Controls */
+#main_slider a.carousel-control-next,
+#main_slider a.carousel-control-prev {
+    position: absolute;
+    top: 35%;
+    width: 65px;
+    height: 65px;
+    background: #004080; /* Navy background */
+    color: #FFFFFF; /* White icon color */
+    font-size: 30px;
+    border-radius: 50%; /* Circular controls */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+#main_slider a.carousel-control-next:hover,
+#main_slider a.carousel-control-prev:hover {
+    background-color: #0080FF; /* Light blue on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+#main_slider .carousel-control-next {
+    right: 30px;
+}
+
+#main_slider .carousel-control-prev {
+    left: 30px;
+}
+
+/* Hover Styles for Carousel Controls */
+#main_slider .carousel-control-prev:hover,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-next:focus {
+    background: #0080FF; /* Light blue */
+    color: #FFFFFF; /* Maintain white text */
+}
+
+/* Padding Adjustments */
+.padding_top_10 {
+    padding-top: 10px; /* Adjusted for better spacing */
+}
+
+/* Products Section */
+.products_section {
+    width: 100%;
+    float: left;
+    background-image: linear-gradient(rgba(0, 40, 80, 0.8), rgba(0, 40, 80, 0.8)), url(../images/11.jpg); /* Added gradient overlay for contrast */
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    height: auto;
+    padding: 60px 0; /* Increased padding for spacing */
+    margin-bottom: 90px;
+    color: #FFFFFF; /* White text for contrast */
+    text-align: center; /* Center-align content */
+}
+
+/* Product Title */
+.product_taital {
+    width: 100%;
+    float: left;
+    font-size: 32px; /* Adjusted size for better readability */
+    color: #D9EFFF; /* Light blue for title */
+    font-weight: 500; /* Medium font weight for emphasis */
+    text-transform: uppercase; /* Professional touch */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+    margin-bottom: 20px; /* Added spacing below */
+}
+
+/* Product Subtitle */
+.product_text {
+    width: 100%;
+    float: left;
+    font-size: 64px; /* Reduced size for better balance */
+    color: #FFFFFF; /* White for maximum contrast */
+    font-weight: bold;
+    line-height: 1.2; /* Improved line spacing */
+    margin-bottom: 40px; /* Spacing below subtitle */
+}
+
+/* Shop Button */
+.shop_bt_1 {
+    width: 160px;
+    float: left;
+    margin: 30px auto; /* Center-align the button */
+}
+
+.shop_bt_1 a {
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF; /* White text */
+    background-color: #004080; /* Navy blue background */
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 5px; /* Rounded corners */
+    text-transform: uppercase; /* Consistent button style */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.shop_bt_1 a:hover {
+    color: #004080; /* Navy text on hover */
+    background-color: #FFFFFF; /* White background on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Product Images Container */
+.images_main {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center; /* Center-align images */
+    gap: 20px; /* Adds spacing between images */
+}
+
+/* Individual Product Image */
+.image_10 {
+    width: calc(25% - 20px); /* Adjusted width for 4 images in a row */
+    float: left;
+    padding-top: 30px;
+    border-radius: 8px; /* Rounded edges for consistency */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.image_10:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Watch Section */
+.watch_section {
+    width: 100%;
+    float: left;
+    background-color: #F5F7FA; /* Light gray for clean separation */
+    height: auto;
+    padding: 60px 0; /* Increased padding for spacing */
+    text-align: center; /* Center-align content */
+}
+
+/* Watch Title */
+.watch_taital {
+    width: 100%;
+    float: left;
+    font-size: 36px; /* Adjusted size for better readability */
+    color: #004080; /* Navy blue for professionalism */
+    font-weight: bold;
+    text-transform: uppercase; /* Professional touch */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+    margin-bottom: 20px; /* Added spacing below */
+}
+
+/* Watch Text */
+.watch_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #333333; /* Dark gray for readability */
+    line-height: 1.8; /* Improved line spacing */
+    margin: 0 auto 30px; /* Center-align and spacing below */
+    max-width: 800px; /* Limit the text width */
+}
+
+/* Read More Button */
+.read_bt_1 {
+    width: 160px;
+    float: left;
+    margin: 30px auto; /* Center-align the button */
+}
+
+.read_bt_1 a {
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF; /* White text */
+    background-color: #004080; /* Navy blue background */
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 5px; /* Rounded corners */
+    text-transform: uppercase; /* Consistent button style */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.read_bt_1 a:hover {
+    background-color: #0080FF; /* Light blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    color: #FFFFFF; /* Keep white text on hover */
+}
+
+.client_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 100px;
+}
+
+.client_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #0f0e0e;
+    font-weight: 500;
+}
+
+.client_section_2 {
+    width: 100%;
+    float: left;
+}
+
+.quote_icon {
+    width: 100%;
+    float: left;
+}
+
+.sandy_text {
+    width: 100%;
+    float: left;
+    font-size: 30px;
+    color: #1a1a1b;
+    padding-top: 30px;
+}
+
+.lorem_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #161617;
+    margin-left: 0px;
+}
+
+/* Footer Section */
+.footer_section {
+    width: 100%;
+    float: left;
+    background-color: #00264D; /* Navy blue background for professionalism */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 40px 0; /* Added padding for spacing */
+}
+
+/* Footer Title */
+.footer_taital {
+    width: 100%;
+    float: left;
+    font-size: 28px; /* Adjusted size for better readability */
+    color: #D9EFFF; /* Light blue for emphasis */
+    font-weight: 600; /* Slightly bolder font weight */
+    text-transform: uppercase; /* Professional touch */
+    text-align: center;
+    margin-bottom: 20px; /* Added spacing below title */
+}
+
+/* Footer Description Text */
+.dolor_text, .dolor_text_1 {
+    width: 90%;
+    float: left;
+    font-size: 16px;
+    color: #FFFFFF; /* White text */
+    line-height: 1.8; /* Improved line spacing */
+    margin: 0 auto; /* Center-align text */
+    text-align: center;
+}
+
+/* Subscription Input */
+.enter_text {
+    width: 60%; /* Adjusted width for smaller screens */
+    max-width: 500px; /* Limit max width */
+    float: left;
+    font-size: 16px;
+    color: #333333; /* Darker text color */
+    background-color: #FFFFFF; /* White background */
+    border-radius: 20px; /* Rounded edges */
+    padding: 10px 20px;
+    border: 1px solid #D9EFFF; /* Light blue border */
+    margin: 10px auto; /* Center-align input */
+    display: block;
+}
+
+/* Subscribe Button */
+.subscribe_bt {
+    width: 160px;
+    float: left;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.subscribe_bt a {
+    display: block;
+    font-size: 16px;
+    color: #FFFFFF; /* White text */
+    background-color: #004080; /* Navy blue background */
+    border-radius: 20px; /* Rounded button */
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.subscribe_bt a:hover {
+    background-color: #0080FF; /* Light blue on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Social Icons */
+.social_icon {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social_icon ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center icons */
+    gap: 15px; /* Add spacing between icons */
+}
+
+.social_icon li {
+    list-style: none;
+    padding: 0;
+}
+
+.social_icon li a {
+    color: #FFFFFF;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.social_icon li a:hover {
+    color: #0080FF; /* Light blue on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Footer Logo */
+.footer_logo {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Copyright Section */
+.copyright_section {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #004080; /* Navy border for separation */
+    padding-top: 20px;
+}
+
+.copyright_text {
+    font-size: 14px;
+    color: #D9EFFF; /* Light blue text */
+}
+
+.copyright_text a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyright_text a:hover {
+    color: #0080FF; /* Light blue on hover */
+}
+
+/* Contact Section */
+.contact_section {
+    width: 100%;
+    float: left;
+    padding: 60px 0;
+    background-color: #F5F7FA; /* Light gray background for contrast */
+    text-align: center;
+}
+
+/* Contact Title */
+.touch_taital {
+    width: 100%;
+    float: left;
+    font-size: 36px;
+    color: #004080; /* Navy blue for professionalism */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px; /* Added spacing below title */
+}
+
+/* Contact Inputs */
+.email_text {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+    max-width: 800px; /* Limit max width */
+    margin: 0 auto; /* Center-align content */
+    text-align: left; /* Align text to the left */
+}
+
+.email-bt, .massage-bt {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #333333; /* Darker text color */
+    padding: 10px 15px;
+    border: 1px solid #D9EFFF; /* Light blue border */
+    background-color: #FFFFFF; /* White background */
+    border-radius: 8px; /* Rounded edges */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Send Button */
+.send_btn {
+    width: 170px;
+    float: left;
+    margin: 20px auto;
+}
+
+.send_btn a {
+    display: block;
+    font-size: 18px;
+    color: #FFFFFF; /* White text */
+    background-color: #004080; /* Navy blue background */
+    text-align: center;
+    padding: 12px 15px;
+    border-radius: 20px; /* Rounded button */
+    text-transform: uppercase; /* Consistent button style */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.send_btn a:hover {
+    background-color: #0080FF; /* Light blue on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Map Section */
+.map_main {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px; /* Rounded edges for consistency */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
