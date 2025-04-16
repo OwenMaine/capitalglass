@@ -1049,61 +1049,62 @@ button:hover {
     transform: translateY(-3px); /* Lift effect on hover */
 }
 
-/* Product Images Container */
-.images_main {
+/* Products Section */
+.products_section {
     width: 100%;
     float: left;
-    display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    justify-content: center; /* Center-align images */
-    gap: 20px; /* Adds spacing between images */
-}
-
-/* Individual Product Image */
-.image_10 {
-    width: calc(25% - 20px); /* Adjusted width for 4 images in a row */
-    float: left;
-    padding-top: 30px;
-    border-radius: 8px; /* Rounded edges for consistency */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-}
-
-.image_10:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Watch Section */
-.watch_section {
-    width: 100%;
-    float: left;
-    background-color: #F5F7FA; /* Light gray for clean separation */
+    background-image: linear-gradient(rgba(0, 40, 80, 0.8), rgba(0, 40, 80, 0.8)), url('../images/11.jpg'); /* Gradient overlay */
+    background-size: cover;
+    background-position: center;
     height: auto;
-    padding: 60px 0; /* Increased padding for spacing */
-    text-align: center; /* Center-align content */
+    padding: 60px 0;
+    color: #ececf4; /* Light text for better contrast */
 }
 
-/* Watch Title */
-.watch_taital {
-    width: 100%;
-    float: left;
-    font-size: 36px; /* Adjusted size for better readability */
-    color: #004080; /* Navy blue for professionalism */
+/* Product Title */
+.product_taital {
+    font-size: 28px;
+    color: #D9EFFF; /* Light blue for emphasis */
     font-weight: bold;
-    text-transform: uppercase; /* Professional touch */
-    letter-spacing: 1px; /* Slight spacing for elegance */
-    margin-bottom: 20px; /* Added spacing below */
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-/* Watch Text */
-.watch_text {
-    width: 100%;
-    float: left;
+/* Product Subtitle */
+.product_text {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Product Description */
+.product_description {
     font-size: 16px;
-    color: #333333; /* Dark gray for readability */
-    line-height: 1.8; /* Improved line spacing */
-    margin: 0 auto 30px; /* Center-align and spacing below */
-    max-width: 800px; /* Limit the text width */
+    line-height: 1.8;
+}
+
+/* Image Grid Layout */
+.images_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid with dynamic sizing */
+    gap: 10px; /* Spacing between images */
+    margin-top: 20px;
+}
+
+/* Individual Image Styling */
+.image_item {
+    width: 100%;
+    height: 150px; /* Uniform height for all images */
+    object-fit: cover; /* Ensures images maintain aspect ratio and fill the container */
+    border-radius: 8px; /* Rounded edges for modern design */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.image_item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Read More Button */
